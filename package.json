@@ -59,9 +59,12 @@
         "test": "mocha && eslint lib/**",
         "postinstall": "gulp",
         "build": "gulp",
-        "start": "chmod +x bin/slackin && ./bin/slackin"
+        "start": "chmod +x bin/slackin && ./bin/slackin > /dev/null 2>&1"
     },
     "now": {
+        "name": "slackin",
+        "alias": "slack.fukuokago.tech",
+        "public": true,
         "type": "npm",
         "files": [
             "bin",
